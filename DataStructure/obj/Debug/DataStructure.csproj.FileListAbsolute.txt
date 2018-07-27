@@ -1,0 +1,14 @@
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\bin\Debug\DataStructure.exe.config
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\bin\Debug\DataStructure.exe
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\bin\Debug\DataStructure.pdb
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.csprojResolveAssemblyReference.cache
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.csproj.CoreCompileInputs.cache
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.exe
+C:\Users\mmehndiratta\source\repos\DataStructure\DataStructure\obj\Debug\DataStructure.pdb
+B:\c# practice\MVA\DataStructure\DataStructure\bin\Debug\DataStructure.exe.config
+B:\c# practice\MVA\DataStructure\DataStructure\bin\Debug\DataStructure.exe
+B:\c# practice\MVA\DataStructure\DataStructure\bin\Debug\DataStructure.pdb
+B:\c# practice\MVA\DataStructure\DataStructure\obj\Debug\DataStructure.csprojAssemblyReference.cache
+B:\c# practice\MVA\DataStructure\DataStructure\obj\Debug\DataStructure.csproj.CoreCompileInputs.cache
+B:\c# practice\MVA\DataStructure\DataStructure\obj\Debug\DataStructure.exe
+B:\c# practice\MVA\DataStructure\DataStructure\obj\Debug\DataStructure.pdb
