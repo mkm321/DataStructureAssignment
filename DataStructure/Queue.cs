@@ -50,11 +50,11 @@ namespace DataStructure
             {
                 for(int j = first; j <= last; j++)
                 {
-                    if (queueStack[j] > queueStack[i])
+                    if (queueStack[j] < queueStack[j+1])
                     {
-                        int temp = queueStack[i];
-                        queueStack[i] = queueStack[j];
-                        queueStack[j] = temp;
+                        int temp = queueStack[j];
+                        queueStack[j] = queueStack[j+1];
+                        queueStack[j+1] = temp;
                     }
                 }
             }
