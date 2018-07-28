@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructure
 {
+    //implements Interface
     class Queue : ICommonOperations
     {
         private static int m_max = 10;
