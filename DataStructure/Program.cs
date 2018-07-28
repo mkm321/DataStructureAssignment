@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ namespace DataStructure
         static void LinkListOperation()
         {
             LinkedList linkedList = new LinkedList();
-            int Choice;
+            int choiceLL;
             do
             {
                 Console.WriteLine();
@@ -22,10 +22,10 @@ namespace DataStructure
                                     "\n5 to show the linked list " +
                                     "\n6 to Sort the linked list " +
                                     "\n7 to exit");
-                Choice = int.Parse(Console.ReadLine());
+                choiceLL = int.Parse(Console.ReadLine());
                 int data;
                 int position;
-                switch (Choice)
+                switch (choiceLL)
                 {
                     case 1:
                         Console.Write("Enter Data to add :- ");
@@ -69,12 +69,12 @@ namespace DataStructure
                         break;
                 }
             }
-            while (Choice!=7);
+            while (choiceLL!=7);
         }
         static void StackOperation()
         {
             Stack stack = new Stack();
-            int Choice;
+            int choiceStack;
             do
             {
                 Console.WriteLine();
@@ -84,8 +84,8 @@ namespace DataStructure
                     "\n4 to get top value " +
                     "\n5 to sort the stack" +
                     "\n6 to Exit ");
-                Choice = int.Parse(Console.ReadLine());
-                switch (Choice)
+                choiceStack = int.Parse(Console.ReadLine());
+                switch (choiceStack)
                 {
                     case 1:
                         Console.WriteLine("Enter Elements");
@@ -116,12 +116,12 @@ namespace DataStructure
                         break;
                 }
             }
-            while (Choice!=6);
+            while (choiceStack!=6);
         }
         static void QueueOperation()
         {
             Queue queue = new Queue();
-            int Choice;
+            int choiceQueue;
             do
             {
                 Console.WriteLine();
@@ -133,9 +133,9 @@ namespace DataStructure
                                     "\n6 to check queue is full or not " +
                                     "\n7 to check queue is empty or not " +
                                     "\n8 to Exit");
-                Choice = int.Parse(Console.ReadLine());
+                choiceQueue = int.Parse(Console.ReadLine());
                 int data;
-                switch (Choice)
+                switch (choiceQueue)
                 {
                     case 1:
                         Console.Write("Enter Data to add :- ");
@@ -159,11 +159,11 @@ namespace DataStructure
                         Console.WriteLine("Queue Sorted");
                         break;
                     case 5:
-                        data =queue.peek();
+                        data =queue.Peek();
                         Console.WriteLine("Peek Value is :- "+ data);
                         break;
                     case 6:
-                        int response = queue.isFull();
+                        int response = queue.IsFull();
                         if (response == 1)
                         {
                             Console.WriteLine("Queue is full...");
@@ -174,7 +174,7 @@ namespace DataStructure
                         }
                         break;
                     case 7:
-                        response = queue.isEmpty();
+                        response = queue.IsEmpty();
                         if (response == 1)
                         {
                             Console.WriteLine("Queue is Empty");
@@ -184,17 +184,18 @@ namespace DataStructure
                             Console.WriteLine("Queue is not Empty");
                         }
                         break;
-                    case 8:break;
+                    case 8:
+                        break;
                     default:
                         Console.WriteLine("Invalid Entry");
                         break;
                 }
             }
-            while (Choice != 7);
+            while (choiceQueue != 8);
         }
         static void Main(string[] args)
         {
-            int Choice;
+            int choiceDataStructure;
             do
             {
 
@@ -203,8 +204,8 @@ namespace DataStructure
                     "\n2 to Enter into Stack World " +
                     "\n3 to Enter into Queue World " +
                     "\n4 to Leave This world ");
-                Choice = int.Parse(Console.ReadLine());
-                switch (Choice)
+                choiceDataStructure = int.Parse(Console.ReadLine());
+                switch (choiceDataStructure)
                 {
                     case 1:
                         LinkListOperation();
@@ -222,7 +223,7 @@ namespace DataStructure
                         break;
                 }
             }
-            while (Choice!=4);
+            while (choiceDataStructure!=4);
             Console.WriteLine("Bye, Thanks For using the Services");
             Console.ReadKey();
         }
