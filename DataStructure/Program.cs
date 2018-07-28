@@ -8,6 +8,7 @@ namespace DataStructure
 {
     class Program
     {
+        //Function for all linked list operations
         static void LinkListOperation()
         {
             LinkedList linkedList = new LinkedList();
@@ -71,6 +72,7 @@ namespace DataStructure
             }
             while (choiceLL!=7);
         }
+        //function for all stack operations
         static void StackOperation()
         {
             Stack stack = new Stack();
@@ -118,6 +120,7 @@ namespace DataStructure
             }
             while (choiceStack!=6);
         }
+        //function for all queue operations
         static void QueueOperation()
         {
             Queue queue = new Queue();
