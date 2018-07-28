@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructure
 {
+    //This class is creating a Node.
     class Node
     {
         public int data;
@@ -18,6 +19,7 @@ namespace DataStructure
     }
     class LinkedList : ICommonOperations
     {
+    //intializing head of the linked list with null
         private Node m_head = null;
         public void Add(int data)
         {
@@ -25,6 +27,7 @@ namespace DataStructure
             newNode.next = m_head;
             m_head = newNode; 
         }
+        //Insertion at given position.
         public void InsertAtSpecificPosition(int data,int position)
         {
             Node newNode = new Node(data);
@@ -50,6 +53,7 @@ namespace DataStructure
             }
 
         }
+        //Removing at given position
         public void RemoveAtSpecificPosition(int position)
         {
             if (m_head == null)
