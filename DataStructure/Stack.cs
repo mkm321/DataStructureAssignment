@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructure
 {
+    //Implements interface common operations
     class Stack : ICommonOperations
     {
         private int[] m_stackArray = new int[10000];
