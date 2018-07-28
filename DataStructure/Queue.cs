@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,64 +8,64 @@ namespace DataStructure
 {
     class Queue : ICommonOperations
     {
-        static int max = 10;
-        int first = 0;
-        int last = 0;
-        int[] queueStack = new int[max];
+        private static int m_max = 10;
+        private int m_first = 0;
+        private int m_last = 0;
+        private int[] m_queueArray = new int[m_max];
         public void Add(int data)
         {
-            if (last == 10)
+            if (m_last == 10)
             {
                 Console.WriteLine("Sorry, Queue is full! ");
             }
             else
             {
-                queueStack[last]=data;
-                last++;
+                m_queueArray[m_last]=data;
+                m_last++;
             }
         }
         public void Remove()
         {
-            if (first == last)
+            if (m_first == m_last)
             {
                 Console.WriteLine("Queue is already Empty!");
             }
             else
             {
-                queueStack[first] = 0;
-                first++;
+                m_queueArray[m_first] = 0;
+                m_first++;
             }
         }
         public void Display()
         {
-            int temp = first;
-            for(int i = temp; i <= last-1; i++)
+            int temp = m_first;
+            for(int index = temp; index <= m_last - 1; index++)
             {
-                Console.Write(queueStack[i] + " ");
+                Console.Write(m_queueArray[index] + " ");
             }
         }
         public void Sort()
         {
-            for(int i = first; i <= last; i++)
+            for(int outerIndex = m_first; outerIndex <= m_last; outerIndex++)
             {
-                for(int j = first; j <= last; j++)
+                for(int innerIndex = m_first; innerIndex <= m_last; innerIndex++)
                 {
-                    if (queueStack[j] < queueStack[j+1])
+                    if (m_queueArray[innerIndex] < m_queueArray[innerIndex + 1])
                     {
-                        int temp = queueStack[j];
-                        queueStack[j] = queueStack[j+1];
-                        queueStack[j+1] = temp;
+                        int temp = m_queueArray[innerIndex];
+                        m_queueArray[innerIndex] = m_queueArray[innerIndex + 1];
+                        m_queueArray[innerIndex + 1] = temp;
                     }
                 }
             }
         }
-        public int peek()
+        public int Peek()
         {
-            return queueStack[first];
+            return m_queueArray[m_first];
         }
-        public int isFull()
+        public int IsFull()
         {
-            if (last == max)
+            if (m_last == m_max)
             {
                 return 1;
             }
@@ -74,9 +74,9 @@ namespace DataStructure
                 return 0;
             }
         }
-        public int isEmpty()
+        public int IsEmpty()
         {
-            if (first==last)
+            if (m_first == m_last)
             {
                 return 1;
             }
