@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,65 +9,64 @@ namespace DataStructure
     class Node
     {
         public int data;
-        public Node Next;
+        public Node next;
         public Node(int data)
         {
             this.data = data;
-            Next = null;
+            next = null;
         }
     }
     class LinkedList : ICommonOperations
     {
-        Node Head = null;
+        private Node m_head = null;
         public void Add(int data)
         {
-            Node NewNode = new Node(data);
-            NewNode.Next = Head;
-            Head = NewNode; 
+            Node newNode = new Node(data);
+            newNode.next = m_head;
+            m_head = newNode; 
         }
-        public void InsertAtSpecificPosition(int data,int i)
+        public void InsertAtSpecificPosition(int data,int position)
         {
-            Node New_Node = new Node(data);
-            if (Head == null)
+            Node newNode = new Node(data);
+            if (m_head == null)
             {
                 Add(data);
             }
             else
             {
                 int index = 0;
-                Node NewNode = new Node(data);
-                Node current = Head;
-                while(current!=null && index < (i - 2))
+                Node current = m_head;
+                while(current!=null && index < (position - 2))
                 {
-                    current = current.Next;
+                    current = current.next;
                     index++;
                 }
                 if (current == null)
                 {
                     Console.WriteLine("Invalid Position");
                 }
-                NewNode.Next = current.Next;
-                current.Next = NewNode;
+                newNode.next = current.next;
+                current.next = newNode;
             }
 
         }
-        public void RemoveAtSpecificPosition(int i)
+        public void RemoveAtSpecificPosition(int position)
         {
-            if (Head == null)
+            if (m_head == null)
             {
                 Console.WriteLine("Empty");
             }
-            else if (Head.Next == null)
+            else if (m_head.next == null)
             {
                 Remove();
             }
             else
             {
                 int index = 0;
-                Node current = Head;
-                while(current!=null && index < (i - 2))
+                Node current = m_head;
+                while(current!=null && index < (position - 2))
                 {
-                    current = current.Next;
+                    current = current.next;
                     index++;
                 }
                 if (current == null)
@@ -76,44 +75,44 @@ namespace DataStructure
                 }
                 else
                 {
-                    current.Next = current.Next.Next;
+                    current.next = current.next.next;
                 }
             }
         }
         public void Remove()
         {
-            if (Head != null)
+            if (m_head != null)
             {
-                Head = Head.Next;
+                m_head = m_head.next;
             }
         }
         public void Display()
         {
-            Node Temporary = Head;
-            while (Temporary != null)
+            Node temporary = m_head;
+            while (temporary != null)
             {
-                Console.Write(Temporary.data + " ");
-                Temporary = Temporary.Next;
+                Console.Write(temporary.data + " ");
+                temporary = temporary.next;
             }
             Console.WriteLine();
         }
         public void Sort()
         {
-            Node Temp = Head;
-            while (Temp.Next != null)
+            Node tempHead = m_head;
+            while (tempHead.next != null)
             {
-                Node Temp1 = Temp.Next;
-                while (Temp1 != null)
+                Node tempHeadNext = tempHead.next;
+                while (tempHeadNext != null)
                 {
-                    if (Temp.data > Temp1.data)
+                    if (tempHead.data > tempHeadNext.data)
                     {
-                        int d = Temp.data;
-                        Temp.data = Temp1.data;
-                        Temp1.data = d;
+                        int data = tempHead.data;
+                        tempHead.data = tempHeadNext.data;
+                        tempHeadNext.data = data;
                     }
-                    Temp1 = Temp1.Next;
+                    tempHeadNext = tempHeadNext.next;
                 }
-                Temp = Temp.Next;
+                tempHead = tempHead.next;
             }
         }
     }
